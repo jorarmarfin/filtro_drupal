@@ -1,0 +1,12 @@
+popup:
+  version: 8.x-1.0
+  css:
+    theme:
+      css/popup.css: {}
+  js:
+    js/greensock/TweenMax.min.js: {}
+    js/popup.js: {}
+  dependencies:
+    - core/drupal
+    - core/jquery
+    - core/jquery.once

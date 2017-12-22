@@ -1,0 +1,7 @@
+popup.content:
+    path: '/admin/config/user-interface/popup'
+    defaults:
+        _controller: '\Drupal\popup\Controller\MainController::init'
+        _title: 'Modulo de Popup'
+    requirements:
+        _permission: 'access content'

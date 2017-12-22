@@ -1,0 +1,24 @@
+<?php
+
+/**
+ * @file
+ * Contains popup.module.
+ */
+
+use Drupal\Core\Routing\RouteMatchInterface;
+
+/**
+ * Implements hook_help().
+ */
+function popup_help($route_name, RouteMatchInterface $route_match) {
+  switch ($route_name) {
+    // Main module help for the popup module.
+    case 'help.page.popup':
+      $output = '';
+      $output .= '<h3>' . t('About') . '</h3>';
+      $output .= '<p>' . t('Modulo para el popup de la portada') . '</p>';
+      return $output;
+
+    default:
+  }
+}

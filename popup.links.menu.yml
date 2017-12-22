@@ -1,0 +1,5 @@
+popup.configpage:
+  title: Modulo de Popup
+  description: 'Configurar el modulo de popup'
+  parent: system.admin_config_ui
+  route_name: pruebas_module.content

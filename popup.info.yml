@@ -1,0 +1,9 @@
+name: Popup
+type: module
+description: Modulo para el popup de la portada
+core: 8.x
+package: Ana
+dependencies:
+  - block
+libraries:
+  - popup/popup
