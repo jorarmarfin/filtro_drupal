@@ -59,7 +59,7 @@ class DefaultBlock extends BlockBase {
 
   private function htmlStructure() {
     $query = \Drupal::entityQuery('node')
-              ->condition('type', 'anuncios')
+              ->condition('type', 'article')
               ->condition('status', 1)
               ->sort('nid','DESC')
               ->range(0, 5);

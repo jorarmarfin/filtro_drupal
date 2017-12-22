@@ -1,7 +1,7 @@
 popup.routing:
     path: '/admin/config/user-interface/popup'
     defaults:
-        _controller: '\Drupal\popup\Controller\MainController::init'
-        _title: 'Modulo de Popup'
+        _form: 'Drupal\popup\Form\SettingForm'
+        _title: 'Popup'
     requirements:
-        _permission: 'access content'
+        _permission: 'administer site configuration'

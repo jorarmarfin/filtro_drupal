@@ -1,5 +1,5 @@
 popup.configpage:
-  title: Modulo de Popup
+  title: Popup
   description: 'Configurar el modulo de popup'
   parent: system.admin_config_ui
   route_name: popup.routing
