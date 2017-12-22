@@ -1,4 +1,4 @@
-popup.content:
+popup.routing:
     path: '/admin/config/user-interface/popup'
     defaults:
         _controller: '\Drupal\popup\Controller\MainController::init'
