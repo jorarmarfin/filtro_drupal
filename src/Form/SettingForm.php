@@ -5,7 +5,7 @@
  * Contains Drupal\SettingForm\Form\TestFormForm
  */
 
-namespace Drupal\ModTest\Form;
+namespace Drupal\popup\Form;
 
 use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
