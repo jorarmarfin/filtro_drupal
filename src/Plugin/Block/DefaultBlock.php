@@ -53,13 +53,14 @@ class DefaultBlock extends BlockBase {
    */
   public function build() {
     $build = [];
-    /*$config_popup = \Drupal::config('popup.settings');
-    print_r(['expression'=>'asd']);*/
-
     $build['popup_block']['#markup'] = $this->htmlStructure();
     $build['#attached']['library'][] = 'popup/popup';
 
-    return $build;
+    $config_popup = \Drupal::config('popup.settings');
+    $sw = $config_popup->get('popup');
+
+    if($sw)return $build;
+    else return '';
   }
 
   private function htmlStructure() {
