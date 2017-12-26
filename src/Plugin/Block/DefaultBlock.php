@@ -3,6 +3,7 @@
 namespace Drupal\popup\Plugin\Block;
 
 use Drupal\Core\Block\BlockBase;
+use Drupal\Core\Form\ConfigFormBase;
 use Drupal\Core\Form\FormStateInterface;
 use Drupal\Core\Url;
 
@@ -15,6 +16,7 @@ use Drupal\Core\Url;
  * )
  */
 class DefaultBlock extends BlockBase {
+
 
   /**
    * {@inheritdoc}
@@ -51,6 +53,9 @@ class DefaultBlock extends BlockBase {
    */
   public function build() {
     $build = [];
+    /*$config_popup = \Drupal::config('popup.settings');
+    print_r(['expression'=>'asd']);*/
+
     $build['popup_block']['#markup'] = $this->htmlStructure();
     $build['#attached']['library'][] = 'popup/popup';
 
@@ -58,6 +63,7 @@ class DefaultBlock extends BlockBase {
   }
 
   private function htmlStructure() {
+
     $query = \Drupal::entityQuery('node')
               ->condition('type', 'article')
               ->condition('status', 1)

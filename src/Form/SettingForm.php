@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Contains Drupal\SettingForm\Form\TestFormForm
+ * Contains Drupal\SettingForm\Form\PopupForm
  */
 
 namespace Drupal\popup\Form;
@@ -19,22 +19,22 @@ class SettingForm extends ConfigFormBase {
   * {@inheritdoc}
   */
   public function getFormId() {
-    return 'Form_settings';
+    return 'popup_settings';
   }
 
   /**
   * {@inheritdoc}
   */
   public function getEditableConfigNames() {
-    return ['SettingForm.settings'];
+    return ['popup.settings'];
   }
 
   /**
   * {@inheritdoc]
   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
-    $this->config('SettingForm.settings')
-      ->set('test', $form_state->getValue('test'))
+    $this->config('popup.settings')
+      ->set('popup', $form_state->getValue('popup'))
       ->save();
     parent::submitForm($form, $form_state);
   }
@@ -42,11 +42,13 @@ class SettingForm extends ConfigFormBase {
   * {@inheritdoc}
   */
   public function buildForm(array $form, FormStateInterface $form_state) {
-    $config = $this->config('SettingForm.settings');
-    $form['test'] = array(
-      '#type' => 'textfield',
-      '#title' => $this->t('This is the test var'),
-      '#default_value' => $config->get('test')
+    $config = $this->config('popup.settings');
+
+    $form['popup'] = array(
+      '#type' => 'radios',
+      '#title' => $this->t('Activar el Popup'),
+      '#options' => [1 => 'Activar', 0 => 'Desactivar'],
+      '#default_value' => $config->get('popup')
     );
     $form['actions']['#type'] = 'actions';
     $form['actions']['submit'] = array (
