@@ -26,16 +26,23 @@ class SettingForm extends ConfigFormBase {
   * {@inheritdoc}
   */
   public function getEditableConfigNames() {
-    return ['popup.settings'];
+    return ['popup.settings','block.block.popup'];
   }
 
   /**
   * {@inheritdoc]
   */
   public function submitForm(array &$form, FormStateInterface $form_state) {
+
     $this->config('popup.settings')
       ->set('popup', $form_state->getValue('popup'))
       ->save();
+
+    $this->config('block.block.popup')
+      ->set('status', $form_state->getValue('popup'))
+      ->save();
+
+
     parent::submitForm($form, $form_state);
   }
   /**

@@ -56,17 +56,13 @@ class DefaultBlock extends BlockBase {
     $build['popup_block']['#markup'] = $this->htmlStructure();
     $build['#attached']['library'][] = 'popup/popup';
 
-    $config_popup = \Drupal::config('popup.settings');
-    $sw = $config_popup->get('popup');
-
-    if($sw)return $build;
-    else return '';
+    return $build;
   }
 
   private function htmlStructure() {
 
     $query = \Drupal::entityQuery('node')
-              ->condition('type', 'article')
+              ->condition('type', 'anuncios')
               ->condition('status', 1)
               ->sort('nid','DESC')
               ->range(0, 5);
