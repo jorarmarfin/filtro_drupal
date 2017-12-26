@@ -52,11 +52,15 @@ class DefaultBlock extends BlockBase {
    * {@inheritdoc}
    */
   public function build() {
-    $build = [];
-    $build['popup_block']['#markup'] = $this->htmlStructure();
-    $build['#attached']['library'][] = 'popup/popup';
+    $config_popup = \Drupal::config('popup.settings');
+    $sw = $config_popup->get('popup');
+    if($sw){
+      $build = [];
+      $build['popup_block']['#markup'] = $this->htmlStructure();
+      $build['#attached']['library'][] = 'popup/popup';
 
-    return $build;
+      return $build;
+    }
   }
 
   private function htmlStructure() {
