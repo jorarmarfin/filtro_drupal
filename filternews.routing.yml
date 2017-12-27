@@ -1,5 +1,5 @@
 filternews.search:
-  path: '/vista'
+  path: '/noticias'
   defaults:
     _title: 'Buscador para noticias'
   requirements:

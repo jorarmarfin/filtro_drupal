@@ -68,8 +68,8 @@ class FilterForm extends FormBase {
     $query = [];
 
     $query = array_merge($query, ['title' => $titulo]);
-    $query = array_merge($query, ['field_fecha_publicacion_value' => $inicio]);
-    $query = array_merge($query, ['field_fecha_publicacion_value_1' => $fin]);
+    $query = array_merge($query, ['field_fecha_de_publicacion_value_1' => $inicio]);
+    $query = array_merge($query, ['field_fecha_de_publicacion_value' => $fin]);
 
 
 
