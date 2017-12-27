@@ -1,0 +1,6 @@
+filternews.search:
+  path: '/vista'
+  defaults:
+    _title: 'Buscador para noticias'
+  requirements:
+    _permission: 'access content'

@@ -1,7 +1,0 @@
-popup.routing:
-    path: '/admin/config/user-interface/popup'
-    defaults:
-        _form: 'Drupal\popup\Form\SettingForm'
-        _title: 'Popup'
-    requirements:
-        _permission: 'administer site configuration'

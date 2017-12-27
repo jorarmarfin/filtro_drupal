@@ -1,0 +1,6 @@
+name: FilterNews
+type: module
+description: Filtro para las noticias
+core: 8.x
+package: Ana
+

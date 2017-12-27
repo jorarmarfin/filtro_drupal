@@ -1,6 +1,0 @@
-name: FilterYear
-type: module
-description: Modulo para filtrar por año
-core: 8.x
-package: Ana
-
