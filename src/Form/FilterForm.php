@@ -68,8 +68,8 @@ class FilterForm extends FormBase {
     $query = [];
 
     $query = array_merge($query, ['title' => $titulo]);
-    $query = array_merge($query, ['field_fecha_de_publicacion_value_1' => strtotime($inicio)]);
-    $query = array_merge($query, ['field_fecha_de_publicacion_value' => strtotime($fin.' 23:59:59')]);
+    $query = array_merge($query, ['field_fecha_de_publicacion_value_1' => $inicio]);
+    $query = array_merge($query, ['field_fecha_de_publicacion_value' => $fin.' 23:59:59']);
 
 
     $response = new RedirectResponse(\Drupal::url('filternews.search', array() , array('query' => $query)));
