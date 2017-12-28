@@ -31,7 +31,7 @@ class FilterForm extends FormBase {
 
     $form['field_titulo_value'] = [
       '#type' => 'textfield',
-      '#size' => 60,
+      '#size' => 30,
       '#maxlength' => 128,
       '#placeholder' => 'Titulo',
       '#prefix' => '<div class="formulario-expuesto"><div class="form--inline clearfix">',
