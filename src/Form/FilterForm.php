@@ -66,8 +66,8 @@ class FilterForm extends FormBase {
     $inicio = $form_state->getValue('field_fecha_inicio_value');
     $fin = $form_state->getValue('field_fecha_fin_value');
     $query = [];
-
     $query = array_merge($query, ['title' => $titulo]);
+    $query = array_merge($query, ['title_op' => 'contains']);
     $query = array_merge($query, ['field_fecha_de_publicacion_value_1' => $inicio]);
     $query = array_merge($query, ['field_fecha_de_publicacion_value' => $fin.' 23:59:59']);
 
